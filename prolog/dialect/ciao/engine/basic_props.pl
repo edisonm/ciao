@@ -1,8 +1,8 @@
-/*  Part of SWI-Prolog
+/*  Part of Ciao Prolog compatibility library
 
-    Author:        Edison Mera
+    Author:        The Ciao Development Team, port by Edison Mera
     E-mail:        efmera@gmail.com
-    WWW:           http://www.swi-prolog.org
+    WWW:           http://www.edisonm.com
     Copyright (C): 2013, Process Design Center, Breda, The Netherlands.
 
     This program is free software; you can redistribute it and/or
@@ -26,8 +26,6 @@
     invalidate any other reasons why the executable file might be covered by
     the GNU General Public License.
 */
-
-%% Migrated from Ciao to SWI-Prolog
 
 :- module(basic_props,
         [term/1, int/1, nnegint/1, flt/1, num/1, atm/1, struct/1,

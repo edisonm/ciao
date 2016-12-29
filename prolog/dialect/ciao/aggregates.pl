@@ -1,8 +1,8 @@
-/*  Part of SWI-Prolog
+/*  Part of Ciao Prolog compatibility library
 
     Author:        Jan Wielemaker, Edison Mera
     E-mail:        J.Wielemaker@uva.nl, efmera@gmail.com
-    WWW:           http://www.swi-prolog.org
+    WWW:           http://www.edisonm.com
     Copyright (C): 2010, University of Amsterdam and
                    2013, Process Design Center, Breda, The Netherlands.
     

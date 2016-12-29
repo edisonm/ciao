@@ -1,8 +1,8 @@
-/*  Part of SWI-Prolog
+/*  Part of Ciao Prolog compatibility library
 
-    Author:        Edison Mera
+    Author:        The Ciao Development Team, ported by Edison Mera
     E-mail:        efmera@gmail.com
-    WWW:           http://www.swi-prolog.org
+    WWW:           http://www.edisonm.com
     Copyright (C): 2013, Process Design Center, Breda, The Netherlands.
 
     This program is free software; you can redistribute it and/or
@@ -26,8 +26,6 @@
     invalidate any other reasons why the executable file might be covered by
     the GNU General Public License.
 */
-
-%% Migrated from Ciao to SWI-Prolog
 
 :- package(regtypes).
 :- load_compilation_module(library(regtypes(regtypes_tr))).

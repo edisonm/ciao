@@ -1,8 +1,8 @@
-/*  Part of SWI-Prolog
+/*  Part of Ciao Prolog compatibility library
 
-    Author:        Edison Mera
+    Author:        The Ciao Development Team, ported by Edison Mera
     E-mail:        efmera@gmail.com
-    WWW:           http://www.swi-prolog.org
+    WWW:           http://www.edisonm.com
     Copyright (C): 2013, Process Design Center, Breda, The Netherlands.
 
     This program is free software; you can redistribute it and/or
@@ -44,8 +44,6 @@
 			 % gc/0, nogc/0, fileerrors/0, nofileerrors/0
 			],
 	    [assertions, nortchecks, isomodes, define_flag]).
-
-%% Migrated from Ciao to SWI-Prolog
 
 :- data old_flag/2.
 

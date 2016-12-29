@@ -1,8 +1,8 @@
-/*  Part of SWI-Prolog
+/*  Part of Ciao Prolog compatibility library
 
-    Author:        Edison Mera
+    Author:        The Ciao Development Team, ported by Edison Mera
     E-mail:        efmera@gmail.com
-    WWW:           http://www.swi-prolog.org
+    WWW:           http://www.edisonm.com
     Copyright (C): 2013, Process Design Center, Breda, The Netherlands.
 
     This program is free software; you can redistribute it and/or
@@ -26,8 +26,6 @@
     invalidate any other reasons why the executable file might be covered by
     the GNU General Public License.
 */
-
-%% Migrated from Ciao to SWI-Prolog
 
 :- module(hiordlib, [map/3, map/4, map/5, map/6, minimum/3, split/4],
 	    [assertions, basicmodes, dcg, % nativeprops, fsyntax,

@@ -1,4 +1,4 @@
-/*  Part of SWI-Prolog
+/*  Part of Ciao Prolog compatibility library
 
     Author:        Jan Wielemaker, Edison Mera
     E-mail:        J.Wielemaker@uva.nl, efmera@gmail.com
