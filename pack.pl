@@ -1,4 +1,4 @@
-name('dialect-ciao').
+name('ciao').
 version('0.0.1').
 title('Ciao Prolog compatibility library').
 keywords([dialect, ciao]).
