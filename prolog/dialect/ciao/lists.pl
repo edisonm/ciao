@@ -33,8 +33,7 @@
 	    list_insert/2,		% -List, +Term
 	    sublist/2			% ?List1, +List2
 	  ]).
-:- reexport('../../lists').
-:- reexport('../../lists', [subtract/3 as difference]).
+:- reexport(swi(library/lists), [subtract/3 as difference]).
 
 %%	nth(?Index, ?List, ?Element) is nondet.
 %

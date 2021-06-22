@@ -40,9 +40,9 @@
 	    printable_char/1
         ]).
 
-:- use_module('../../listing').
-:- use_module('../../error').
-:- use_module('../../apply').
+:- use_module(swi(library/listing)).
+:- use_module(swi(library/error)).
+:- use_module(swi(library/apply)).
 
 %%	write_list(+List) is det.
 %
