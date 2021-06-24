@@ -28,6 +28,7 @@
 */
 
 :- package(assertions).
+:- use_module(engine(basic_props)).
 :- new_declaration(comment/2).
 :- new_declaration(doc/2).
 
