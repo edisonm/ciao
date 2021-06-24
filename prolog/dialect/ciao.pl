@@ -420,7 +420,7 @@ swi_meta_arg(_,    M:Arg, M:Arg) :-
 	(var(Arg) ; atom(Arg)), !.
 swi_meta_arg(_,    '$ciao_meta'(Arg), '$ciao_meta'(Arg)) :- !.
 swi_meta_arg(Meta, Arg, '$ciao_meta'(Arg)) :- integer(Meta), Meta > 0, !.
-swi_meta_arg(_, _, Arg, Arg).
+swi_meta_arg(_,    Arg, Arg).
 
 swi_meta_args(Spec, CiaoGoal, SWIGoal) :-
 	functor(CiaoGoal, F, A),
