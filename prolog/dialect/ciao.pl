@@ -29,7 +29,7 @@
 */
 
 :- module(ciao,
-	  [
+	  [ if/3,			% :If, :Then, :Else
 	   '$ciao_meta'/2,
 	   '$ciao_meta'/3,
 	   '$ciao_meta'/4,
@@ -74,6 +74,45 @@ Typical usage for loading Ciao code is:
 		 *******************************/
 
 user:file_search_path(engine, library(dialect/ciao/engine)).
+
+
+		 /*******************************
+		 *	   CONDITIONALS		*
+		 *******************************/
+
+%!	in_ciao_dialect
+%
+%	True if we are in Ciao emulation
+
+in_ciao_dialect :-
+	(   prolog_load_context(dialect, sicstus)
+	->  true
+	;   prolog_load_context(dialect, sicstus4)
+	).
+
+		 /*******************************
+		 *	      CONTROL		*
+		 *******************************/
+
+:- meta_predicate
+	if(0,0,0).
+
+system:goal_expansion(if(If,Then,Else),
+		      (If *-> Then ; Else)) :-
+	in_ciao_dialect,
+	\+ (sub_term(X, [If,Then,Else]), X == !).
+
+%%	if(:If, :Then, :Else)
+%
+%	Same  as  SWI-Prolog  soft-cut  construct.   Normally,  this  is
+%	translated using goal-expansion. If either term contains a !, we
+%	use meta-calling for full compatibility (i.e., scoping the cut).
+
+if(If, Then, Else) :-
+	(   If
+	*-> Then
+	;   Else
+	).
 
 
 		 /*******************************
@@ -420,7 +459,7 @@ swi_meta_arg(_,    M:Arg, M:Arg) :-
 	(var(Arg) ; atom(Arg)), !.
 swi_meta_arg(_,    '$ciao_meta'(Arg), '$ciao_meta'(Arg)) :- !.
 swi_meta_arg(Meta, Arg, '$ciao_meta'(Arg)) :- integer(Meta), Meta > 0, !.
-swi_meta_arg(_, _, Arg, Arg).
+swi_meta_arg(_,    Arg, Arg).
 
 swi_meta_args(Spec, CiaoGoal, SWIGoal) :-
 	functor(CiaoGoal, F, A),
